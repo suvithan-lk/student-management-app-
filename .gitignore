@@ -1,0 +1,242 @@
+# Build Results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Rider
+.idea/
+.idea/*
+*.sln.iml
+*.sln.ipr
+*.sln.iws
+
+# Visual Studio Code
+.vscode/
+*.vsix
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+.nuget/
+
+# Package Manager
+packages/
+.packages/
+node_modules/
+dist/
+build/
+
+# Entity Framework
+*.db
+*.db-shm
+*.db-wal
+Migrations/*.Designer.cs
+
+# Application Insights
+ApplicationInsights.config
+.ApplicationInsights/
+
+# Local user-specific files
+appsettings.Development.json
+appsettings.*.json
+!appsettings.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.Development.local
+
+# Database files
+*.mdf
+*.ldf
+*.ndf
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+PublishProfiles/
+
+# Publish Profiles
+PublishProfiles/
+*.pubxml
+*.publishxml
+*.azurePubxml
+*.cer
+*.csr
+*.crt
+*.jks
+*.keystore
+
+# BizTalk build output
+*.btp.cs
+*.btm.cs
+*.odx.cs
+*.xsd.cs
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+npm-shrinkwrap.json
+yarn.lock
+
+# WebStorm
+.WebStorm*/
+.idea/
+
+# Miscellaneous files
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.swo
+*~
+.tmp/
+tmp/
+temp/
+
+# Backup files
+*.bak
+*.backup
+*.swp
+*~
+
+# Coverage reports
+coverage/
+lcov.info
+*.coverage
+
+# Resharper
+_ReSharper*/
+*.resharper
+*.resharper.user
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp_proj
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Windows
+[Tt]humbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# Project-specific
+logs/
+output/
+temp/
+.vs/
+appsettings.production.json
+appsettings.staging.json
+
+# Rider IDE
+.idea/
+*.sln.iml
+
+# Local SQL database
+*.sqlite
+*.sqlite3
+
+# Azure
+.PublishSettings
+.Azure/
+
+# Credentials and secrets
+*.key
+*.pem
+*.pfx
+secrets/
+.secrets/
+!.gitkeep
+
+# IDE settings
+.editorconfig
+
+# Miscellaneous
+.fake/
+.fuse_hidden*
+.directory
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Visual Studio version directory
+.vs/
