@@ -17,7 +17,7 @@ namespace StudentCrudApp.Controllers
             _logger = logger;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int:min(1)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<StudentResponseDto>> GetStudent(int id)
@@ -75,7 +75,7 @@ namespace StudentCrudApp.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id:int:min(1)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -94,6 +94,11 @@ namespace StudentCrudApp.Controllers
                 _logger.LogWarning(ex, "Student not found for update");
                 return NotFound(new { message = ex.Message });
             }
+            catch (InvalidOperationException ex)
+            {
+                _logger.LogWarning(ex, "Validation error updating student {id}", id);
+                return BadRequest(new { message = ex.Message });
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error updating student {id}", id);
@@ -101,7 +106,7 @@ namespace StudentCrudApp.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int:min(1)}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteStudent(int id)
