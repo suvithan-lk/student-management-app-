@@ -29,6 +29,8 @@ namespace StudentCrudApp.Application.Services
 
         public async Task<StudentResponseDto> CreateStudentAsync(CreateStudentDto dto)
         {
+            ValidateDateOfBirth(dto.DateOfBirth);
+
             var email = NormalizeEmail(dto.Email);
             if (await _repository.ExistsByEmailAsync(email))
                 throw new InvalidOperationException("Email already exists");
@@ -50,6 +52,8 @@ namespace StudentCrudApp.Application.Services
 
         public async Task<StudentResponseDto> UpdateStudentAsync(UpdateStudentDto dto)
         {
+            ValidateDateOfBirth(dto.DateOfBirth);
+
             var student = await _repository.GetByIdAsync(dto.Id);
             if (student == null)
                 throw new KeyNotFoundException("Student not found");
@@ -85,6 +89,13 @@ namespace StudentCrudApp.Application.Services
         }
 
         private static string NormalizeEmail(string email) => email.Trim().ToLowerInvariant();
+
+        private static void ValidateDateOfBirth(DateTime dateOfBirth)
+        {
+            var today = DateTime.UtcNow.Date;
+            if (dateOfBirth.Date > today || dateOfBirth.Date < today.AddYears(-120))
+                throw new InvalidOperationException("Date of birth is invalid");
+        }
 
         private static StudentResponseDto MapToResponseDto(Student student) => new()
         {
